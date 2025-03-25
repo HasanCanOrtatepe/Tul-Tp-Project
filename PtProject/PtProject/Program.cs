@@ -1,5 +1,7 @@
 ﻿using PtProject.LogicLayer;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace CalculatorApp
 {
@@ -13,37 +15,75 @@ namespace CalculatorApp
             {
                 try
                 {
-                    Console.Write("1. Sayı: ");
-                    double a = Convert.ToDouble(Console.ReadLine());
+                    List<(double, string)> operations = new List<(double, string)>();
 
-                    Console.Write("İşlem (+, -, *, /): ");
-                    string op = Console.ReadLine();
+                    Console.Write("Enter the first number: ");
+                    double number = ReadDouble();
+                    operations.Add((number, "+"));
 
-                    Console.Write("2. Sayı: ");
-                    double b = Convert.ToDouble(Console.ReadLine());
-
-                    double result = calc.Calculate(a, b, op);
-                    Console.WriteLine($"Sonuç: {result}\n");
-
-                    Console.Write("Devam etmek için ENTER, geçmişi görmek için G yaz: ");
-                    string choice = Console.ReadLine();
-                    if (choice?.ToLower() == "g")
+                    while (true)
                     {
-                        Console.WriteLine("İşlem Geçmişi:");
-                        foreach (var log in calc.GetHistory())
-                        {
-                            Console.WriteLine(log);
-                        }
+                        Console.Write("Enter operation (+, -, *, /): ");
+                        string op = ReadOperator();
+
+                        Console.Write("Enter next number: ");
+                        number = ReadDouble();
+                        operations.Add((number, op));
+
+                        Console.Write("Do you want to continue? (Y/N): ");
+                        if (Console.ReadLine().Trim().ToLower() != "y")
+                            break;
+                    }
+
+                    double result = calc.CalculateWithPrecedence(operations);
+                    Console.WriteLine($"Result: {result}\n");
+
+                    Console.Write("Press Enter to continue, or type 'H' to view history: ");
+                    if (Console.ReadLine()?.Trim().ToLower() == "h")
+                    {
+                        ShowHistory(calc);
                     }
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"Hata: {ex.Message}");
+                    Console.WriteLine($"Error: {ex.Message}");
                 }
 
-                Console.WriteLine("Çıkmak için Q, devam için ENTER");
-                if (Console.ReadLine()?.ToLower() == "q")
+                Console.WriteLine("Press 'Q' to quit, or Enter to continue.");
+                if (Console.ReadLine()?.Trim().ToLower() == "q")
                     break;
+            }
+        }
+
+        static double ReadDouble()
+        {
+            double value;
+            while (!double.TryParse(Console.ReadLine(), out value))
+            {
+                Console.Write("Invalid input. Please enter a valid number: ");
+            }
+            return value;
+        }
+
+        static string ReadOperator()
+        {
+            string op;
+            while (true)
+            {
+                op = Console.ReadLine();
+                if (op == "+" || op == "-" || op == "*" || op == "/")
+                    break;
+                Console.Write("Invalid operator. Please enter one of (+, -, *, /): ");
+            }
+            return op;
+        }
+
+        static void ShowHistory(Calculator calc)
+        {
+            Console.WriteLine("Operation History:");
+            foreach (var log in calc.GetHistory())
+            {
+                Console.WriteLine(log);
             }
         }
     }
