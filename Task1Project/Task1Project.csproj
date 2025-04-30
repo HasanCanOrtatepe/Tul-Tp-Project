@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Data\" />
+    <None Remove="Data\Models\" />
+    <None Remove="Logic\" />
+    <None Remove="Logic\Abstract\" />
+    <None Remove="Logic\Services\" />
+    <None Remove="Data\Abstract\" />
+    <None Remove="Data\Repositories\" />
+    <None Remove="Data\Repositories\InMemory\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data\" />
+    <Folder Include="Data\Models\" />
+    <Folder Include="Logic\" />
+    <Folder Include="Logic\Abstract\" />
+    <Folder Include="Logic\Services\" />
+    <Folder Include="Data\Abstract\" />
+    <Folder Include="Data\Repositories\" />
+    <Folder Include="Data\Repositories\InMemory\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="xunit" Version="2.9.3" />
+  </ItemGroup>
+</Project>
