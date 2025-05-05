@@ -1,80 +1,87 @@
 ﻿using Xunit;
 using System.Collections.Generic;
-using System.Linq;
-using Task1Project.Data.Repositories.InMemory;
-using Task1Project.Logic.Services;
+using Task1Project.Data;
+using Task1Project.Data.Models.abstracts;
+using Task1Project.Logic;
 
 namespace Task1Project.Tests
 {
     public class LogicTests
     {
         [Fact]
-        public void PlaceOrder_ShouldAddOrder()
+        public void PlaceOrder_ShouldAddOrderWithCorrectUserAndBooks()
         {
             // Arrange
-            var userRepo = new InMemoryUserRepository();
-            var bookRepo = new InMemoryBookRepository();
-            var orderRepo = new InMemoryOrderRepository();
-            var eventRepo = new InMemoryEventRepository();
-
-            userRepo.GenerateSampleUsers();
-            bookRepo.GenerateSampleCatalog();
-
-            var orderService = new OrderService(userRepo, bookRepo, orderRepo, eventRepo);
+            var repo = new InMemoryDataRepository();
+            repo.GenerateSampleUsers();
+            repo.GenerateSampleCatalog();
+            var service = new BookstoreService(repo);
 
             // Act
-            orderService.PlaceOrder(1, new List<int> { 101, 102 });
+            service.PlaceOrder(1, new List<int> { 101, 102 });
 
             // Assert
-            Assert.Single(orderRepo.GetOrders());
+            var orders = repo.GetOrders();
+            Assert.Single(orders);
+            Assert.Equal(1, orders[0].UserId);
+            Assert.Equal(2, orders[0].BookIds.Count);
+            Assert.Contains(101, orders[0].BookIds);
+            Assert.Contains(102, orders[0].BookIds);
         }
 
         [Fact]
-        public void BorrowAndReturnBook_ShouldManageLoans()
+        public void BorrowAndReturnBook_ShouldTrackLoanCorrectly()
         {
             // Arrange
-            var userRepo = new InMemoryUserRepository();
-            var bookRepo = new InMemoryBookRepository();
-            var loanRepo = new InMemoryLoanRepository();
-            var eventRepo = new InMemoryEventRepository();
-
-            userRepo.GenerateSampleUsers();
-            bookRepo.GenerateSampleCatalog();
-
-            var loanService = new LoanService(userRepo, bookRepo, loanRepo, eventRepo);
+            var repo = new InMemoryDataRepository();
+            repo.GenerateSampleUsers();
+            repo.GenerateSampleCatalog();
+            var service = new BookstoreService(repo);
 
             // Act
-            loanService.BorrowBook(1, 101);
+            service.BorrowBook(1, 101);
 
-            // Assert borrow
-            Assert.Single(loanRepo.GetLoans());
+            // Assert Borrow
+            var loans = repo.GetLoans();
+            Assert.Single(loans);
+            Assert.Equal(1, loans[0].UserId);
+            Assert.Equal(101, loans[0].BookId);
 
-            // Act return
-            loanService.ReturnBook(1, 101);
+            // Act Return
+            service.ReturnBook(1, 101);
 
-            // Assert return
-            Assert.Empty(loanRepo.GetLoans());
+            // Assert Return
+            Assert.Empty(repo.GetLoans());
         }
 
         [Fact]
-        public void BorrowAlreadyBorrowedBook_ShouldThrowException()
+        public void BorrowAlreadyBorrowedBook_ShouldThrowExceptionWithMeaningfulMessage()
         {
             // Arrange
-            var userRepo = new InMemoryUserRepository();
-            var bookRepo = new InMemoryBookRepository();
-            var loanRepo = new InMemoryLoanRepository();
-            var eventRepo = new InMemoryEventRepository();
+            var repo = new InMemoryDataRepository();
+            repo.GenerateSampleUsers();
+            repo.GenerateSampleCatalog();
+            var service = new BookstoreService(repo);
 
-            userRepo.GenerateSampleUsers();
-            bookRepo.GenerateSampleCatalog();
-
-            var loanService = new LoanService(userRepo, bookRepo, loanRepo, eventRepo);
-
-            loanService.BorrowBook(1, 101);
+            service.BorrowBook(1, 101);
 
             // Act & Assert
-            var ex = Assert.Throws<System.Exception>(() => loanService.BorrowBook(2, 101));
-            Assert.Contains("already borrowed", ex.Message);
+            var ex = Assert.Throws<System.Exception>(() => service.BorrowBook(2, 101));
+            Assert.Contains("already borrowed", ex.Message, System.StringComparison.OrdinalIgnoreCase);
+        }
+
+        [Fact]
+        public void ReturnBook_ThatWasNotBorrowed_ShouldThrowException()
+        {
+            // Arrange
+            var repo = new InMemoryDataRepository();
+            repo.GenerateSampleUsers();
+            repo.GenerateSampleCatalog();
+            var service = new BookstoreService(repo);
+
+            // Act & Assert
+            var ex = Assert.Throws<System.Exception>(() => service.ReturnBook(1, 101));
+            Assert.Contains("No active loan", ex.Message, System.StringComparison.OrdinalIgnoreCase);
         }
     }
 }

@@ -18,23 +18,31 @@
 /Users/hasancanortatepe/Projects/Task1Project/Task1Project/bin/Debug/net6.0/xunit.core.dll
 /Users/hasancanortatepe/Projects/Task1Project/Task1Project/bin/Debug/net6.0/xunit.execution.dotnet.dll
 /Users/hasancanortatepe/Projects/Task1Project/Task1Project/obj/Debug/net6.0/Task1Project.csproj.CopyComplete
-C:\Users\gulse\Desktop\Task1Project\Task1Project\obj\Debug\net6.0\Task1Project.dll
-C:\Users\gulse\Desktop\Task1Project\Task1Project\obj\Debug\net6.0\refint\Task1Project.dll
-C:\Users\gulse\Desktop\Task1Project\Task1Project\obj\Debug\net6.0\Task1Project.pdb
-C:\Users\gulse\Desktop\Task1Project\Task1Project\bin\Debug\net6.0\Task1Project.exe
-C:\Users\gulse\Desktop\Task1Project\Task1Project\bin\Debug\net6.0\Task1Project.deps.json
-C:\Users\gulse\Desktop\Task1Project\Task1Project\bin\Debug\net6.0\Task1Project.runtimeconfig.json
-C:\Users\gulse\Desktop\Task1Project\Task1Project\bin\Debug\net6.0\Task1Project.dll
-C:\Users\gulse\Desktop\Task1Project\Task1Project\bin\Debug\net6.0\Task1Project.pdb
-C:\Users\gulse\Desktop\Task1Project\Task1Project\bin\Debug\net6.0\xunit.abstractions.dll
-C:\Users\gulse\Desktop\Task1Project\Task1Project\bin\Debug\net6.0\xunit.assert.dll
-C:\Users\gulse\Desktop\Task1Project\Task1Project\bin\Debug\net6.0\xunit.core.dll
-C:\Users\gulse\Desktop\Task1Project\Task1Project\bin\Debug\net6.0\xunit.execution.dotnet.dll
-C:\Users\gulse\Desktop\Task1Project\Task1Project\obj\Debug\net6.0\Task1Project.csproj.AssemblyReference.cache
-C:\Users\gulse\Desktop\Task1Project\Task1Project\obj\Debug\net6.0\Task1Project.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\gulse\Desktop\Task1Project\Task1Project\obj\Debug\net6.0\Task1Project.AssemblyInfoInputs.cache
-C:\Users\gulse\Desktop\Task1Project\Task1Project\obj\Debug\net6.0\Task1Project.AssemblyInfo.cs
-C:\Users\gulse\Desktop\Task1Project\Task1Project\obj\Debug\net6.0\Task1Project.csproj.CoreCompileInputs.cache
-C:\Users\gulse\Desktop\Task1Project\Task1Project\obj\Debug\net6.0\Task1Pro.D3EAB28F.Up2Date
-C:\Users\gulse\Desktop\Task1Project\Task1Project\obj\Debug\net6.0\Task1Project.genruntimeconfig.cache
-C:\Users\gulse\Desktop\Task1Project\Task1Project\obj\Debug\net6.0\ref\Task1Project.dll
+/Users/hasancanortatepe/Downloads/Task1Project 3/Task1Project/obj/Debug/net6.0/Task1Project.csproj.AssemblyReference.cache
+/Users/hasancanortatepe/Downloads/Task1Project 3/Task1Project/obj/Debug/net6.0/Task1Project.GeneratedMSBuildEditorConfig.editorconfig
+/Users/hasancanortatepe/Downloads/Task1Project 3/Task1Project/obj/Debug/net6.0/Task1Project.AssemblyInfoInputs.cache
+/Users/hasancanortatepe/Downloads/Task1Project 3/Task1Project/obj/Debug/net6.0/Task1Project.AssemblyInfo.cs
+/Users/hasancanortatepe/Downloads/Task1Project 3/Task1Project/obj/Debug/net6.0/Task1Project.csproj.CoreCompileInputs.cache
+/Users/hasancanortatepe/Downloads/Task1Project 3/Task1Project/obj/Debug/net6.0/Task1Project.dll
+/Users/hasancanortatepe/Downloads/Task1Project 3/Task1Project/obj/Debug/net6.0/refint/Task1Project.dll
+/Users/hasancanortatepe/Downloads/Task1Project 3/Task1Project/obj/Debug/net6.0/Task1Project.pdb
+/Users/hasancanortatepe/Downloads/Task1Project 3/Task1Project/bin/Debug/net6.0/Task1Project.deps.json
+/Users/hasancanortatepe/Downloads/Task1Project 3/Task1Project/bin/Debug/net6.0/Task1Project.runtimeconfig.json
+/Users/hasancanortatepe/Downloads/Task1Project 3/Task1Project/bin/Debug/net6.0/Task1Project.dll
+/Users/hasancanortatepe/Downloads/Task1Project 3/Task1Project/bin/Debug/net6.0/Task1Project.pdb
+/Users/hasancanortatepe/Downloads/Task1Project 3/Task1Project/obj/Debug/net6.0/Task1Project.genruntimeconfig.cache
+/Users/hasancanortatepe/Downloads/Task1Project 3/Task1Project/obj/Debug/net6.0/ref/Task1Project.dll
+C:\Users\gulse\Desktop\Task1Project 3\Task1Project\bin\Debug\net6.0\Task1Project.deps.json
+C:\Users\gulse\Desktop\Task1Project 3\Task1Project\bin\Debug\net6.0\Task1Project.runtimeconfig.json
+C:\Users\gulse\Desktop\Task1Project 3\Task1Project\bin\Debug\net6.0\Task1Project.dll
+C:\Users\gulse\Desktop\Task1Project 3\Task1Project\bin\Debug\net6.0\Task1Project.pdb
+C:\Users\gulse\Desktop\Task1Project 3\Task1Project\obj\Debug\net6.0\Task1Project.csproj.AssemblyReference.cache
+C:\Users\gulse\Desktop\Task1Project 3\Task1Project\obj\Debug\net6.0\Task1Project.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gulse\Desktop\Task1Project 3\Task1Project\obj\Debug\net6.0\Task1Project.AssemblyInfoInputs.cache
+C:\Users\gulse\Desktop\Task1Project 3\Task1Project\obj\Debug\net6.0\Task1Project.AssemblyInfo.cs
+C:\Users\gulse\Desktop\Task1Project 3\Task1Project\obj\Debug\net6.0\Task1Project.csproj.CoreCompileInputs.cache
+C:\Users\gulse\Desktop\Task1Project 3\Task1Project\obj\Debug\net6.0\Task1Project.dll
+C:\Users\gulse\Desktop\Task1Project 3\Task1Project\obj\Debug\net6.0\refint\Task1Project.dll
+C:\Users\gulse\Desktop\Task1Project 3\Task1Project\obj\Debug\net6.0\Task1Project.pdb
+C:\Users\gulse\Desktop\Task1Project 3\Task1Project\obj\Debug\net6.0\Task1Project.genruntimeconfig.cache
+C:\Users\gulse\Desktop\Task1Project 3\Task1Project\obj\Debug\net6.0\ref\Task1Project.dll

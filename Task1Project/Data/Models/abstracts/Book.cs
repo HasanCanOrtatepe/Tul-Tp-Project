@@ -1,6 +1,6 @@
-﻿namespace Task1Project.Data.Models
+﻿namespace Task1Project.Data.Models.abstracts
 {
-    public class Book
+    public abstract class Book
     {
         public int Id { get; set; }
         public string Title { get; set; }

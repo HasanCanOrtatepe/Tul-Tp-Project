@@ -1,26 +1,47 @@
-﻿using Xunit;
-using Task1Project.Data.Repositories.InMemory;
+﻿using Task1Project.Data;
+using Task1Project.Data.Models.abstracts;
+using Task1Project.Data.Models.concretes;
+using Xunit;
 
-namespace Task1Project.Tests
+public class DataTests
 {
-    public class DataTests
+    [Fact]
+    public void GenerateSampleUsers_ShouldCreateTwoSpecificUsers()
     {
-        [Fact]
-        public void GenerateSampleUsers_ShouldCreateUsers()
-        {
-            var userRepo = new InMemoryUserRepository();
-            userRepo.GenerateSampleUsers();
+        var repo = new InMemoryDataRepository();
+        repo.GenerateSampleUsers();
 
-            Assert.True(userRepo.GetUsers().Count >= 2, "Sample users generation failed.");
-        }
+        var users = repo.GetUsers();
 
-        [Fact]
-        public void GenerateSampleCatalog_ShouldCreateBooks()
-        {
-            var bookRepo = new InMemoryBookRepository();
-            bookRepo.GenerateSampleCatalog();
+        Assert.Equal(2, users.Count);
+        Assert.Contains(users, u => u.Name == "Alice");
+        Assert.Contains(users, u => u.Name == "Bob");
+    }
 
-            Assert.True(bookRepo.GetBooks().Count >= 2, "Sample catalog generation failed.");
-        }
+    [Fact]
+    public void GenerateSampleCatalog_ShouldCreateExpectedBooks()
+    {
+        var repo = new InMemoryDataRepository();
+        repo.GenerateSampleCatalog();
+
+        var books = repo.GetBooks();
+
+        Assert.Equal(2, books.Count);
+        Assert.Contains(books, b => b.Title == "C# Basics" && b.Author == "John Doe");
+        Assert.Contains(books, b => b.Title == "Advanced .NET" && b.Author == "Jane Smith");
+    }
+
+    [Fact]
+    public void AddUser_ShouldIncreaseUserCount()
+    {
+        var repo = new InMemoryDataRepository();
+        int countBefore = repo.GetUsers().Count;
+
+        repo.AddUser(new ConcreteUser { Id = 3, Name = "Charlie" });
+
+        var users = repo.GetUsers();
+
+        Assert.Equal(countBefore + 1, users.Count);
+        Assert.Contains(users, u => u.Name == "Charlie");
     }
 }

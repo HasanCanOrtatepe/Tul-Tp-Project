@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0opg5bCIYaI=",
+  "dgSpecHash": "d5y2rOxGafg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\gulse\\Desktop\\Task1Project\\Task1Project\\Task1Project.csproj",
+  "projectFilePath": "C:\\Users\\gulse\\Desktop\\Task1Project 3\\Task1Project\\Task1Project.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gulse\\.nuget\\packages\\xunit\\2.9.3\\xunit.2.9.3.nupkg.sha512",
     "C:\\Users\\gulse\\.nuget\\packages\\xunit.abstractions\\2.0.3\\xunit.abstractions.2.0.3.nupkg.sha512",

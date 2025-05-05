@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Task1Project.Data.Models
+namespace Task1Project.Data.Models.abstracts
 {
-    public class Event
+    public abstract class Event
     {
         public DateTime Timestamp { get; set; }
         public string Description { get; set; }

@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 
-namespace Task1Project.Data.Models
+namespace Task1Project.Data.Models.abstracts
 {
-    public class Order
+    public abstract class Order
     {
         public int Id { get; set; }
         public int UserId { get; set; }
