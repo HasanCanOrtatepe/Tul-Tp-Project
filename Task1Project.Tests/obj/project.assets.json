@@ -881,39 +881,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\gulse\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "/Users/hasancanortatepe/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gulse\\Desktop\\Task1Project 3\\Task1Project.Tests\\Task1Project.Tests.csproj",
+      "projectUniqueName": "/Users/hasancanortatepe/Downloads/Tul-Tp-Project-main/Task1Project.Tests/Task1Project.Tests.csproj",
       "projectName": "Task1Project.Tests",
-      "projectPath": "C:\\Users\\gulse\\Desktop\\Task1Project 3\\Task1Project.Tests\\Task1Project.Tests.csproj",
-      "packagesPath": "C:\\Users\\gulse\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gulse\\Desktop\\Task1Project 3\\Task1Project.Tests\\obj\\",
+      "projectPath": "/Users/hasancanortatepe/Downloads/Tul-Tp-Project-main/Task1Project.Tests/Task1Project.Tests.csproj",
+      "packagesPath": "/Users/hasancanortatepe/.nuget/packages/",
+      "outputPath": "/Users/hasancanortatepe/Downloads/Tul-Tp-Project-main/Task1Project.Tests/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\gulse\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/hasancanortatepe/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\gulse\\Desktop\\Task1Project 3\\Task1Project\\Task1Project.csproj": {
-              "projectPath": "C:\\Users\\gulse\\Desktop\\Task1Project 3\\Task1Project\\Task1Project.csproj"
+            "/Users/hasancanortatepe/Downloads/Tul-Tp-Project-main/Task1Project/Task1Project.csproj": {
+              "projectPath": "/Users/hasancanortatepe/Downloads/Tul-Tp-Project-main/Task1Project/Task1Project.csproj"
             }
           }
         }
@@ -922,13 +915,7 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
-      },
-      "SdkAnalysisLevel": "9.0.200"
+      }
     },
     "frameworks": {
       "net6.0": {
@@ -960,12 +947,22 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.31, 6.0.31]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.31, 6.0.31]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.317/RuntimeIdentifierGraph.json"
       }
     }
   }

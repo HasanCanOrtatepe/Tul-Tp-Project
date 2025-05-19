@@ -4,8 +4,7 @@ using Task1Project.Data.Models.concretes;
 
 namespace Task1Project.Data
 {
-    // InMemoryDataRepository artık soyut
-    internal abstract class InMemoryDataRepository : AbstractDataRepository
+    internal class InMemoryDataRepository : AbstractDataRepository
 
     {
         private List<User> users = new();

@@ -297,7 +297,7 @@
         "runtime": {
           "lib/netstandard2.0/xunit.abstractions.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "2.0.0.0"
+            "fileVersion": "0.0.0.0"
           }
         }
       },
@@ -344,10 +344,7 @@
           "xunit": "2.9.3"
         },
         "runtime": {
-          "Task1Project.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "Task1Project.dll": {}
         }
       }
     }
